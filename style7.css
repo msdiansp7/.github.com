@@ -1,0 +1,113 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+body {
+background-color:999FFF;
+background-image:url("/storage/emulated/0/DCIM/Msd/shubhampatil.png");
+background:fixed;
+color:#555;
+margin:0 auto;
+font-family:'montserrat',sans-serif;
+overflow:scroll;
+}
+#header{
+height:150px;
+background-color:#1abc9c;
+line:height:150px;
+padding:25px 0 ;
+background-image:url("/storage/emulated/0/DCIM/Msd/Shubhampatil.png");
+}
+#header-title {
+display:block;
+float:left;
+font-size:20px;
+font-weight:bold;
+padding:0 15px 0 15px;
+}
+#header-nav {
+display:block;
+float:right;
+margin-top:0;
+}
+#header-nav li {
+display:inline;
+padding-left:20px;
+padding:0 15px 0 0;
+}
+h5 {
+padding:0 0 0 100px;
+}
+#header a {
+color:white;
+text-decoration:none;
+letter-spacing:0.1em;
+transform:uppercase;
+}
+#header a:hover {
+color:#222;
+}
+#footer {
+background-color:#2f2f2f;
+padding:50px 0;
+}
+.column {
+min-width:400px;
+display:inline-block;
+vertical-align:top;
+padding:0 0 0 50px;
+}
+#footer h4 {
+color:white;
+letter-spacing:0.1em;
+text-transform:uppercase;
+}
+#footer p {
+color:white;
+}
+a {
+text-decoration:none;
+color:#1abc9c;
+}
+a:hover {
+color:#A6A623;
+}
+.post {
+max-width:1000px;
+margin:0;
+padding:60px 0;
+
+}
+.post-author img {
+width:120px;
+height:120px;
+vertical-align:center;
+horizontal-align:middle;
+border:solid 3px ;
+border-radius:60px;
+}
+.post-author span {
+margin-left:16px;
+}
+.post-date {
+color:#D2D2D3;
+font-size:14px;
+font-weight:bold;
+letter-spacing:0.1spacing;
+text-transform:uppercase;
+}
+h1,h2,h3,h4 {
+color:#333;
+}
+p {
+line-height:1.6;
+}
+button {
+color:#1abc9c;
+background-color:#8g8g8f;
+ border:solid 0.2px;
+ border-radius:5px;
+}
+input {
+border:solid 0.2px;
+border-radius:3px;
+}
+
+
