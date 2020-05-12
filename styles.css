@@ -2,7 +2,7 @@
 @import url(https://www.w3schools.com/);
 body {
 background-size:cover;
-background-image:url(Background.png);
+background-image:url("Background.png");
 }
 * {
 padding:0;
