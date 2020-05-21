@@ -50,7 +50,7 @@ from:25x;
 to:75px;
 duration:2s;
 }
-.sidebar:hover {
+#btn:hover {
 right:0;
 top:11.5%;
 width:260px;
