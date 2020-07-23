@@ -1,0 +1,105 @@
+for i in range(1,100):
+    while True:
+        try:
+            n=int(input(f"{i}).Enter no. of observasions : "))
+            DP=int(input("Set precision to decimal points : "))
+            print(" ")
+            x=[]
+            y=[]
+            X2=[]
+            Y2=[]
+            XY=[]
+            for i in range(0,n):
+                x.append(int(input(f"Enter the value of X{i+1} : ")))
+                y.append(int(input(f"Enter the value of Y{i+1} : ")))
+                x2=x[i]**2
+                y2=y[i]**2
+                xy=x[i] * y[i]
+                X2.append(x2)
+                Y2.append(y2)
+                XY.append(xy)
+                print(f"x2 = {x2} ")
+                print(f"y2 = {y2} ")
+                print(f"xy = {xy} \n")
+                i=i+1
+            print(f"x = {x}")
+            print(f"y = {y}")
+            print(f"X2 = {X2}")
+            print(f"Y2 = {Y2}")
+            print(f"XY = {XY}\n")
+            def T(x,y,X2,Y2,XY):
+                xT=0
+                yT=0
+                X2T=0
+                Y2T=0
+                XYT=0
+                for i in x:
+                    xT+=i
+                print(f"Sum of x is = {xT}")
+                for i in y:
+                    yT+=i
+                print(f"Sum of y is = {yT}")
+                for i in X2:
+                    X2T+=i
+                print(f"Sum of X2 is = {X2T}")
+                for i in Y2:
+                    Y2T+=i
+                print(f"Sum of Y2 is = {Y2T}")
+                for i in XY:
+                    XYT+=i
+                print(f"Sum of XY is = {XYT}\n")
+                i=i+1
+        #Average values
+                XYavg= XYT/n
+                Xavg=xT/n
+                Yavg=yT/n
+                X2avg=X2T/n
+                Y2avg=Y2T/n
+        #Values required in formula
+                R1=Xavg * Yavg
+                r1=round(R1,DP)
+                R2=X2avg - (Xavg**2)
+                r2=round(R2,DP)
+                R3=Y2avg - (Yavg**2)
+                r3=round(R3,DP)
+                Bxy1=(XYavg-r1)/r3
+                Byx1=(XYavg-r1)/r2
+                Bxy=round(Bxy1,DP)
+                Byx=round(Byx1,DP)
+                C1=Bxy*(-Yavg)
+                C2=C1+Xavg
+                C=round(C2,DP)
+                LineEqX=str(C)+" + ("+str(Bxy)+"Y)"
+                print("Equation of line of regression of X on Y is : ")
+                print(f"X = {LineEqX}\n")
+                D1=Byx*(-Xavg)
+                D2=D1+Yavg
+                D=round(D2,DP)
+                LineEqY=str(D)+" + ("+str(Byx)+"X)"
+                print("Equation of line of regression of Y on X is : ")
+                print(f"Y = {LineEqY}\n")
+                NextStep=input("Do you want to calculate value of any variable at specific point ? [Y/N]")
+                print(" ")
+                if NextStep=="Y":
+                    var1=input("To find the value of [X/Y] : ")
+                    if var1=="X":
+                        var2=int(input("At Y= "))
+                        Ans=C+(Bxy*var2)
+                        print(f"X = {Ans}")
+                    elif var1=="Y":
+                        var2=int(input("At X ="))
+                        Ans=D+(Byx*var2)
+                        print(f"Y = {Ans}")
+                    else:
+                        print("Invalid input.")
+                elif NextStep=="N":
+                    print("Thank you..........")
+                else:
+                    print("Invalid input.")
+            T(x,y,X2,Y2,XY)
+        except:
+            print("Invalid input")
+            print("Try again..")
+        else:
+            print(".....................\n\n")
+            break
