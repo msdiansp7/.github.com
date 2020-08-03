@@ -52,7 +52,9 @@ for i in range(1,100):
         #Average values
                 XYavg= XYT/n
                 Xavg=xT/n
+                Xavg=round(Xavg,DP)
                 Yavg=yT/n
+                Yavg=round(Yavg,DP)
                 X2avg=X2T/n
                 Y2avg=Y2T/n
         #Values required in formula
@@ -62,10 +64,17 @@ for i in range(1,100):
                 r2=round(R2,DP)
                 R3=Y2avg - (Yavg**2)
                 r3=round(R3,DP)
+                
+                
+                print(f"\nXavg = {Xavg} ")
+                print(f"Yavg = {Yavg} \n")
+                
                 Bxy1=(XYavg-r1)/r3
                 Byx1=(XYavg-r1)/r2
                 Bxy=round(Bxy1,DP)
+                print(f"Bxy = {Bxy} ")
                 Byx=round(Byx1,DP)
+                print(f"Byx = {Byx} \n")
                 if Byx>0:
                     r=(Bxy*Byx)**0.5
                     print(f"r = {round(r,DP)}")

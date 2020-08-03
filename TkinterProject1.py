@@ -7,15 +7,15 @@ root =tk.Tk()
 root.title("TkinterGUI")
 #ttk.Label(root, text="Enter your name : ").grid(row=0,column=0)
 name_label=ttk.Label(root, text="Enter your name : ")
-name_label.grid(row=0,column=0,sticky=tk.W)
+name_label.grid(row=0,column=0,sticky=tk.W,padx=10,pady=2)
 email_label=ttk.Label(root,text="Enter your email : ")
-email_label.grid(row=1,column=0,sticky=tk.W)
+email_label.grid(row=1,column=0,sticky=tk.W,padx=10,pady=2)
 age_label=ttk.Label(root,text="Enter you age : ")
-age_label.grid(row=2,column=0,sticky=tk.W)
+age_label.grid(row=2,column=0,sticky=tk.W,padx=10,pady=2)
 gender_label=ttk.Label(root, text="Select your gender : ")
-gender_label.grid(row=3,column=0,sticky=tk.W)
+gender_label.grid(row=3,column=0,sticky=tk.W,padx=10,pady=2)
 profession_label=ttk.Label(root,text="Select your profession : ")
-profession_label.grid(row=4,column=0,sticky=tk.W)
+profession_label.grid(row=4,column=0,sticky=tk.W,padx=10,pady=2)
 #varibles to store values of entryboxes
 name_var=tk.StringVar()
 email_var=tk.StringVar()
@@ -23,12 +23,12 @@ age_var=tk.StringVar()
 
 #Entry box
 name_entry=ttk.Entry(root, width=10,textvariable=name_var)
-name_entry.grid(row=0,column=1)
+name_entry.grid(row=0,column=1,padx=10,pady=2)
 name_entry.focus()
 email_entry=ttk.Entry(root, width=10,textvariable=email_var)
-email_entry.grid(row=1,column=1)
+email_entry.grid(row=1,column=1,padx=10,pady=2)
 age_entry=ttk.Entry(root, width=10,textvariable=age_var)
-age_entry.grid(row=2,column=1)
+age_entry.grid(row=2,column=1,padx=10,pady=2)
 
 #Creating combobox
 
@@ -36,24 +36,24 @@ gender_var=tk.StringVar()
 gender_combox=ttk.Combobox(root,width=10,textvariable=gender_var,state="readonly")
 gender_combox["values"]=("Male","Female","Others")
 gender_combox.current(0)
-gender_combox.grid(row=3,column=1)
+gender_combox.grid(row=3,column=1,padx=10,pady=2)
 
 #Radio button
 usertype=tk.StringVar()
 radio_button1=ttk.Radiobutton(root,text="student",value="student",variable=usertype)
-radio_button1.grid(row=4,column=1,sticky=tk.W)
+radio_button1.grid(row=4,column=1,sticky=tk.W,padx=10,pady=2)
 radio_button2=ttk.Radiobutton(root,text="Teacher",value="Teacher",variable=usertype)
-radio_button2.grid(row=5,column=1,sticky=tk.W)
+radio_button2.grid(row=5,column=1,sticky=tk.W,padx=10,pady=2)
 radio_button3=ttk.Radiobutton(root,text="Principal",value="Principal",variable=usertype)
-radio_button3.grid(row=6,column=1,sticky=tk.W)
+radio_button3.grid(row=6,column=1,sticky=tk.W,padx=10,pady=2)
 
 #Checkbutton
 English=tk.IntVar()
 checkBtn1=ttk.Checkbutton(root,text="English",variable=English)
-checkBtn1.grid(row=7,column=0,sticky=tk.W)
+checkBtn1.grid(row=7,column=0,sticky=tk.W,padx=10,pady=2)
 Hindi=tk.IntVar()
 checkBtn2=ttk.Checkbutton(root,text="Hindi",variable=Hindi)
-checkBtn2.grid(row=7,column=1)
+checkBtn2.grid(row=7,column=1,padx=10,pady=2)
 
 #defining function for submit button action
 def action():

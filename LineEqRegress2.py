@@ -62,7 +62,11 @@ for i in range(1,100):
         Bxy1=(XYavg-r1)/r3
         Byx1=(XYavg-r1)/r2
         Bxy=round(Bxy1,DP)
+        print("")
+        print(Bxy)
         Byx=round(Byx1,DP)
+        print(Byx)
+        print("")
         C1=Bxy*(-Yavg)
         C2=C1+Xavg
         C=round(C2,DP)
